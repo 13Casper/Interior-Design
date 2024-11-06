@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.753)), url(Images/background.jpg);
+    background-size: cover;
+    background-position: center; 
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    padding: 30px 0;
+    width: 85%;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    list-style-type: none;
+}
+
+#logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: aquamarine;
+    left: 0;
+    bottom: -10px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+h1{
+    color: white;
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+p{
+    color: white;
+    font-weight: 100;
+    padding: 10px 150px;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid aquamarine;
+    color: white;
+    margin: 30px 15px;
+    cursor:pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px 15px;
+}
+
+span{
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    background-color: aquamarine;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+    z-index: 1;
+}
+
